@@ -514,6 +514,7 @@ h2 {
 
 #image-one {
     max-width: 1200px;
+    
 }
 
 @media screen and (max-width: 1900px) {
@@ -572,6 +573,73 @@ h2 {
         max-width: 800px;
     }
 }
+
+@media screen and (max-width: 1000px) { 
+
+    .form-wrapper {
+        height: 810px;
+        min-width: 200px !important;
+        
+        margin-top: 40px;
+      }
+
+    .main-nav {
+        display: none;
+        
+    }
+
+    .foot-nav {
+        display: none;
+        
+    }
+
+    #hero {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 250px;
+        padding-bottom: 250px;
+    }
+
+    #careers-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        
+      }
+
+    
+
+      
+
+  
+
+   
+
+    .mobile-padding {
+        padding-left: 15px;
+        padding-right: 15px;
+        
+    }
+
+}
+
+@media screen and (max-width: 1500px) { 
+    #image-one {
+        max-width: 600px;
+    
+    }
+
+}
+
+
+@media screen and (max-width: 1200px) { 
+    
+
+
+
+}
+
 
 
 
