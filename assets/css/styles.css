@@ -584,12 +584,12 @@ h2 {
       }
 
     .main-nav {
-        display: none;
+        display: none !important;
         
     }
 
     .foot-nav {
-        display: none;
+        display: none !important;
         
     }
 
