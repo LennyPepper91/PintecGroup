@@ -546,6 +546,7 @@ h2 {
     background-color: #1d0e0e;
     margin: 6px 0px;
     transition: 0.4s;
+    
 
 
 }
@@ -573,6 +574,7 @@ h2 {
     background-color: #2d5992;
     padding-top: 120px;
     transition: 0.4s;
+   
 
   
 
@@ -661,6 +663,7 @@ h2 {
 }
 
 @media screen and (min-width: 1000px) {
+    
 
 
     .mobile-nav {
@@ -673,6 +676,15 @@ h2 {
 }
 
 @media screen and (max-width: 1000px) { 
+
+    .service-test {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        
+        
+     }
 
     #logo {
         width: 160px; 
@@ -991,9 +1003,7 @@ h2 {
 
 
 
-.service-title {
-    background-color: #330624;
-}
+
 
 .overlay-button {
     position: absolute;
@@ -1037,3 +1047,101 @@ h2 {
     
     
  }
+
+
+
+ .service-test {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    
+    
+ }
+
+ 
+
+ #test-img {
+    width: 600px;
+    
+   
+    
+ }
+
+ .test-div {
+    background-color: #f0eceb;
+    height: 338px;
+    width: 600px;
+    
+    
+    
+
+}
+
+
+.section-test {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 75px;
+    
+}
+
+
+#good-one {
+    margin-bottom: 75px;
+}
+
+.div-bar {
+    height: 20px;
+    width: 100%;
+    background-color: #2d5992;
+}
+
+
+.service-title {
+    color: #2d5992;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+    padding-top: 20px;
+    margin-bottom: 0px;
+    position: relative;
+    padding-left: 25px;
+    
+    
+}
+
+
+.big-services{
+    font-family: 'Open Sans', sans-serif;
+    color: #424242;
+    font-size: .9rem;
+    position: relative;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 5px;
+    
+
+}
+
+.service-button
+{
+    background-color: #2d5992;
+    margin-top: 2px;
+    border: none;
+    font-weight: 100;
+    font-size: 1rem;
+    
+    
+    cursor: pointer;
+    padding: 8px 18px;
+    font-family: poppins;
+    margin-left: 25px;
+}
+
+.service-button a
+{
+    
+    font-weight: 200;
+    font-size: .9rem;
+}
