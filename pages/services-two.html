@@ -23,7 +23,7 @@
                 <ul>
                   <li><a href="../index.html">Home</a></li>
                   <li><a href="about.html">About</a></li>
-                  <li><a href="services.html">Services</a></li>
+                  <li><a href="services-two.html">Services</a></li>
                   <li><a href="careers.html">Careers</a></li>
                   <li><a href="contact-us.html">Contact Us</a></li>
                 </ul>
@@ -38,7 +38,7 @@
       
       <a href="../index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="services.html">Services</a>
+      <a href="services-two.html">Services</a>
       <a href="projects.html">Projects</a>
       <a href="careers.html">Careers</a>
       <a href="contact-us.html">Contact Us</a>
@@ -49,7 +49,7 @@
     <div>
       
       <div class="hero-content">
-        <h1 class="fade">Services2</h1>
+        <h1 class="fade">Services</h1>
        
       </div>
     </div>
@@ -62,7 +62,7 @@
   <section id="about-two">
     <div class="about-container-two">
 
-      <img src="../assets/images/services-decal-one.svg" alt="Pintec-Logo" id="service-two-decal">
+      
 
       
 
@@ -75,7 +75,7 @@
         
         </p>
 
-      <p class="big-about fade"> See a full list of our services below.</p>
+      <p class="big-about fade" id="good-one"> See a full list of our services below.</p>
         
       
 
@@ -85,25 +85,59 @@
     </div>
   </section>
 
-  <div class="services-two-container">
-    
-    <div class="services-item"> 
-      
-        <img src="/assets/images/project-two.jpg" alt="" >
-        <div class="under-section">Hello</div>
-      
-      
- 
-  </div>
+  <section class="section-test" >
+    <div class="service-test">
+    <img src="../assets/images/service-one-600.jpg" alt="Pintec-Logo" id="test-img">
+    <div class="test-div">
+      <div class="div-bar"></div>
+      <h2 class="service-title hidden">Commercial & Domestic Heating</h2>
+      <p class="big-services hidden">At Pintec Group, we are the forefront of Commercial & Domestic 
+        Heating solutions, specialising in a diverse range of services. From 
+        efficient Low-Temperature Hot Water (LTHW) systems to cutting-edge Fan Coil Units (FCUs), Underfloor Heating, Boilers, and Plate Heat 
+        Exchangers, we bring decades of collective experience to create optimal heating environments.</p>
+        <button class="service-button hidden"><a>Our Projects</a></button>
+    </div>
+    </div>
 
- 
-    
+    <div class="service-test">
+      
+      <div class="test-div">
+        <div class="div-bar"></div>
+      <h2 class="service-title hidden">Commercial & Domestic Plumbing</h2>
+        <p class="big-services hidden">Pintec Group stands as a leader in Commercial & Domestic Plumbing 
+          services, delivering comprehensive solutions tailored to meet the diverse needs of our clients. From intricate commercial plumbing installations to precise residential plumbing projects, we bring expertise, efficiency, and innovation to every project.</p>
+          <button class="service-button hidden"><a>Our Projects</a></button>
+      </div>
 
-    
-    
-    
-</div>
+      <img src="../assets/images/service-two-600.jpg" alt="Pintec-Logo" id="test-img">
+      </div>
 
+      <div class="service-test">
+        <img src="../assets/images/service-three-600.jpg" alt="Pintec-Logo" id="test-img">
+        <div class="test-div">
+          <div class="div-bar"></div>
+      <h2 class="service-title hidden">Above Ground Drainage & RWP</h2>
+          <p class="big-services hidden">At Pintec Group, our expertise extends to Above Ground Drainage and Rainwater Pipe (RWP) solutions for both commercial and domestic 
+            settings. We specialise in designing and implementing efficient drainage systems that meet the highest standards of functionality and durability.</p>
+            <button class="service-button hidden"><a>Our Projects</a></button>
+        </div>
+        </div>
+
+        <div class="service-test">
+      
+          <div class="test-div">
+            <div class="div-bar"></div>
+          <h2 class="service-title hidden">Full Plant Room Installation</h2>
+            <p class="big-services hidden">Pintec Group takes pride in offering comprehensive solutions for Full Plant Room Installations. Whether for commercial developments or residential 
+              projects, our experienced team is equipped to design, install, and maintain plant rooms that meet the most rigorous quality benchmarks in the industry.</p>
+              <button class="service-button hidden"><a>Our Projects</a></button>
+          </div>
+    
+          <img src="../assets/images/service-one-600.jpg" alt="Pintec-Logo" id="test-img">
+          </div>
+
+       
+  </section>
 
 
   
@@ -129,6 +163,26 @@
     
 </body>
 <script>
+ const observer = new IntersectionObserver ((entries) => {
+    entries.forEach ((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting){
+        entry.target.classList.add('show');
+
+      } else {
+        entry.target.classList.remove ('show');
+      }
+  });
+  
+});
+  
+  
+  const hiddenElements = document.querySelectorAll ('.hidden');
+  hiddenElements.forEach((el) => observer.observe(el));
+
+
+
+
   const menu_btn = document.querySelector('.hamburger');
   const mobile_menu = document.querySelector('.mobile-nav');
 
