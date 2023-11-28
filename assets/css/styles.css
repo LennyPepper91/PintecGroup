@@ -947,10 +947,13 @@ h2 {
     
   }
 
-  input {
-    border: none
+  input:focus, textarea:focus {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #2d5992;
   }
-
   #form-logo {
     height: 100px;
     margin-top: 0;
@@ -1198,7 +1201,7 @@ h2 {
     left: -200px;
     bottom: -300px;
 
-    
+    transform: rotateY(180deg);
    
    z-index: 1;
     
