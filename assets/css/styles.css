@@ -11,7 +11,7 @@ html, body {
 #logo-white {
     width: 75px; 
   height: auto;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   
 }
 
@@ -171,13 +171,6 @@ h1 {
    
 }
 
-button a {
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-decoration: none;
-}
 
 .learn-more-button {
         margin-top: 25px;
@@ -191,11 +184,17 @@ button a {
         padding-left: 25px;
         padding-right: 25px;
         cursor: pointer;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-decoration: none;
        
 }
 
 .learn-more-button:hover {
     background-color: #5882b9;
+    color: rgba(255, 255, 255, 0.842);
     
     
 }
@@ -341,11 +340,12 @@ h2 {
 
 
 
-.project-button a
+.project-button 
 {
     
     font-weight: 200;
     font-size: 1rem;
+    color: white;
 }
 
 
@@ -827,6 +827,18 @@ h2 {
 
 
 
+    
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 2.2rem;
+
+    }
+    .subheading {
+        font-size: 1rem;
+
+    }
 }
 
 
@@ -1134,7 +1146,7 @@ h2 {
     margin-top: 2px;
     border: none;
     font-weight: 100;
-    font-size: 1rem;
+    font-size: rem;
     
     
     cursor: pointer;
@@ -1143,11 +1155,12 @@ h2 {
     margin-left: 25px;
 }
 
-.service-button a
+.service-button 
 {
-    
+    font-family: poppins;
     font-weight: 200;
-    font-size: .9rem;
+    font-size: 1rem;
+    color: white;
 }
 
 
@@ -1234,4 +1247,14 @@ h2 {
      
     margin-bottom: 75px;
     
+}
+
+
+.button-font {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+
 }
