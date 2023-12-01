@@ -240,7 +240,7 @@ footer {
 
 
 #about-hero {
-    background-image: url("../images/about-backplate.jpg");
+    background-image: url("../images/3d-test-room-two.png");
     
     
     background-size: cover;
@@ -249,6 +249,77 @@ footer {
     padding-top: 250px;
     padding-bottom: 250px;
 }
+
+#about-hero-two {
+    background-image: url("../images/pipe-three.jpg");
+    
+    
+    background-size: cover;
+    background-position: center;
+   
+    padding-top: 250px;
+    padding-bottom: 250px;
+}
+
+#about-hero-three {
+    background-image: url("../images/pipe-four.jpeg");
+    
+    
+    background-size: cover;
+    background-position: center;
+   
+    padding-top: 250px;
+    padding-bottom: 250px;
+}
+
+#about-hero-four {
+    background-image: url("../images/3d-test-again-clay.png");
+    
+    
+    background-size: cover;
+    background-position: center;
+   
+    padding-top: 250px;
+    padding-bottom: 250px;
+}
+
+#about-hero-five {
+    background-image: url("../images/3d-test-room-two.png");
+    
+    
+    background-size: cover;
+    background-position: center;
+   
+    padding-top: 250px;
+    padding-bottom: 250px;
+}
+
+#about-hero-six {
+    background-image: url("../images/3d-test-room-two.png");
+    
+    
+    background-size: cover;
+    background-position: center;
+   
+    padding-top: 250px;
+    padding-bottom: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #contact-hero {
     background-image: url("../images/contact-backplate.jpg");
