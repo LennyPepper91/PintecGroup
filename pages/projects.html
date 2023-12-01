@@ -24,6 +24,7 @@
                   <li><a href="../index.html">Home</a></li>
                   <li><a href="about.html">About</a></li>
                   <li><a href="services-two.html">Services</a></li>
+                  <li><a href="projects.html">Projects</a></li>
                   <li><a href="careers.html">Careers</a></li>
                   <li><a href="contact-us.html">Contact Us</a></li>
                 </ul>
@@ -62,13 +63,13 @@
   <section id="about-two" class="mobile-padding">
     <div class="about-container-two">
 
-      <img src="../assets/images/about-decal-one.svg" alt="Pintec-Logo" id="decal">
+      <img src="../assets/images/about-decal-one.svg" alt="Pintec-Logo" id="project-decal">
 
       
 
       <h2 class="fade">Our projects</h2>
       
-      <p class="big-about fade">Details to be added.</p>
+      <p class="big-about fade"></p>
 
 
         
@@ -81,22 +82,22 @@
    
   </section>
 
-  <div class="projects-container">
+  <div class="projects-container fade">
     <div class="project-item">
-    <img src="assets/images/project-two.jpg" alt="" >
-    <button class="overlay-button">Project 1</button>
+    <img src="../assets/images/project-one.jpg" alt="" >
+    <a href="project-one.html"><button class="overlay-button">CPFC Academy Rehabilitation Centre</button></a>
     </div>
     <div class="project-item">
-        <img src="assets/images/project-one.jpg" alt="" >
-        <button class="overlay-button">Project 2</button>
+        <img src="../assets/images/project-two.jpg" alt="" >
+        <a href="project-two.html"><button class="overlay-button">Dl-28 East</button></a>
         </div>
         <div class="project-item">
-            <img src="assets/images/project-two.jpg" alt="" >
-            <button class="overlay-button">Project 3</button>
+            <img src="../assets/images/project-three.jpg" alt="" >
+            <a href="project-three.html"><button class="overlay-button">Whitstable Care Home</button></a>
             </div>
             <div class="project-item">
-                <img src="assets/images/project-two.jpg" alt="" >
-                <button class="overlay-button">Project 4</button>
+                <img src="../assets/images/project-four.jpg" alt="" >
+                <a href="project-four.html"><button class="overlay-button">One Welbeck</button></a>
                 </div>
     
 </div>
@@ -130,6 +131,14 @@
       menu_btn.classList.toggle('is-active');
       mobile_menu.classList.toggle('is-active');
     });
+
+
+    window.onload = function() {
+  // Use setTimeout to delay the transition for a smooth effect
+  setTimeout(function() {
+    document.querySelector('.projects-container').style.bottom = '0';
+  }, 100);
+};
   
   </script>
 </html>

@@ -45,14 +45,12 @@
         <a href="contact-us.html">Contact Us</a>
       
     </nav>
-
-
     
-  <section id="about-hero" class="mobile-padding">
+  <section id="projects-one-hero" class="mobile-padding">
     <div>
       
-      <div class="hero-content">
-        <h1 class="fade">About Us</h1>
+      <div class="hero-content ">
+        <h1 class="fade">Our Projects</h1>
        
       </div>
     </div>
@@ -60,37 +58,58 @@
 
   <div class="gray-divider"></div>
 
+  <section class="about-container-two" >
   
   
-  <section id="about-two" class="mobile-padding">
-    <div class="about-container-two">
+    
+  <div class="project-two-container">
+  
 
-      <img src="../assets/images/about-decal-one.svg" alt="Pintec-Logo" id="decal">
+  <div>
+    <h2 class="fade">One Welbeck</h2>
+    <span class="location" style="display: block;">Location: London, W1G 0AR</span>
+  <p>One Welbeck is one of the country’s largest specialist facilities for diagnostics, therapies, and minimally invasive surgery & Pintec Group has been working direct for WHP to provide efficient and proactive around the clock maintenance throughout their headquarters ensuring to keep this highly efficient and quality private hospital up and running at all times with minimal disturbance to their patients.
 
-      
+    
+    
+    </p>
+  
+  <span class="status">Status:</span>
+  <span class="ongoing ">Active</span>
+  <span class="maintenance ">Maintenance</span>
+</div>
+<img src="/assets/images/project-four.jpg">
+</div>
 
-      <h2 class="fade">About Pintec Group</h2>
-      
-      <p class="big-about fade">Pintec Group was founded on the 28th April 2017 by Andrew Monday & Scott O’Connor, previously trading under our property company until we rebranded and joined all ventures under one banner in 2021.</p>
 
-      <p class="big-about fade"> We specialise in Plumbing, Heating, and Above Ground Drainage in largely commercial and industrial settings, including Hospitals, Schools, Care Homes, and Offices to name a few.</p>
-        
-      <p class="big-about fade">  We have quickly gained an excellent reputation for providing a consistently high and efficient service, showcasing our multiple years of 
-        experience in the Mechanical Engineering industry.</p>
-        
-        <p class="big-about fade"> We continue to build an impressive portfolio of numerous successful projects and building a reputable name among many building 
-        contractors. Much of our work is repeat business, evidencing the high standards of our installations and professionalism of our team as well as the strong communication skills which we feel is hard to find in the industry as of late.</p>
-        
-        
-        <p class="big-about fade">The experience and skillset of our workforce is demonstrated in every project we undertake, ensuring consistency from the beginning until the end of each project and we pride ourselves on the commitment shown by every person within our company.</p>
-        
-        <p class="big-about fade">Pintec Group is committed to promoting upstanding Health, Safety and Quality Management Systems.</p>
+</section>
 
-       <a href="services-two.html" class="button-font"><button class="project-button">Our Services</button></a>
-
-        
+<div class="title">
+    
+    <h3>Other projects</h3>
     </div>
-  </section>
+
+
+<section class="related-section">
+    <a href="project-one.html"> <div class="related-item">
+        <img src="/assets/images/project-one.jpg">
+    </div></a>
+   
+    <a href="project-two.html"> <div class="related-item">
+        <img src="/assets/images/project-two.jpg">
+    </div></a>
+
+    <a href="project-three.html"> <div class="related-item">
+        <img src="/assets/images/project-three.jpg">
+    </div></a>
+
+    <a href="project-four.html"> <div class="related-item">
+        <img src="/assets/images/project-four.jpg">
+    </div></a>
+   
+</section>
+
+
      
   <footer class="about-footer">
     <img src="../assets/images/Pintec-logo-white.svg" alt="Pintec-Logo" id="logo-white">
@@ -109,19 +128,27 @@
     
     
   </footer>
+  <div class="copyright">© Pintec Group Ltd 2023</div>  
 
-
-  <div class="copyright">© Pintec Group Ltd 2023</div> 
+    
 </body>
 <script>
-  const menu_btn = document.querySelector('.hamburger');
-  const mobile_menu = document.querySelector('.mobile-nav');
+    const menu_btn = document.querySelector('.hamburger');
+    const mobile_menu = document.querySelector('.mobile-nav');
+  
+    menu_btn.addEventListener('click', function () {
+      menu_btn.classList.toggle('is-active');
+      mobile_menu.classList.toggle('is-active');
+    });
 
-  menu_btn.addEventListener('click', function () {
-    menu_btn.classList.toggle('is-active');
-    mobile_menu.classList.toggle('is-active');
-  });
 
-</script>
+    window.onload = function() {
+  // Use setTimeout to delay the transition for a smooth effect
+  setTimeout(function() {
+    document.querySelector('.projects-container').style.bottom = '0';
+  }, 100);
+};
+  
+  </script>
 </html>
  
