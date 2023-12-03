@@ -1148,6 +1148,30 @@ h2 {
         padding-top: 150px;
         padding-bottom: 150px;
     }
+
+    #careers-hero {
+        background-image: url("../images/careers-backplate.jpg");
+        
+        background-size: cover;
+        background-position: center;
+       
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    #contact-hero {
+        background-image: url("../images/contact-backplate.jpg");
+        
+        background-size: cover;
+        background-position: center;
+       
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    #contact-decal {
+        display: none;
+    }
 }
 
 .services-two-container {
