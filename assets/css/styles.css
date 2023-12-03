@@ -1128,6 +1128,26 @@ h2 {
     .project-item {
         flex: 0 0 100%; /* Change to single column for smaller screens */
     }
+    #services-hero {
+        background-image: url("../images/services-backplate.jpg");
+        
+        background-size: cover;
+        background-position: center;
+       
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    #about-hero {
+        background-image: url("../images/about-backplate.jpg");
+        
+        
+        background-size: cover;
+        background-position: center;
+       
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
 }
 
 .services-two-container {
