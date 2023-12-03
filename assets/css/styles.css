@@ -1172,6 +1172,10 @@ h2 {
     #contact-decal {
         display: none;
     }
+
+    #decal {
+        display: none;
+    }
 }
 
 .services-two-container {
