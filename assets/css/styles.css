@@ -786,7 +786,7 @@ h2 {
 @media screen and (max-width: 1000px) { 
 
     .service-test {
-        max-width: 1200px;
+        
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -1143,6 +1143,20 @@ h2 {
     
   }
 
+  @media screen and (max-width: 700px) {
+    .related-section {
+    
+        display: flex;
+        gap: 10px;
+        max-width: 1200px;
+        margin: auto;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+  }
+
 @media screen and (max-width: 1000px) {
 
     .overlay-button {
@@ -1162,6 +1176,15 @@ h2 {
         width: 300px;
         
       }
+
+      
+
+      .project-one-container {
+        display: flex;
+        gap: 75px;
+        flex-direction: column;
+        
+    }
 
 
     .project-item {
@@ -1483,6 +1506,7 @@ h2 {
 .project-one-container {
     display: flex;
     gap: 75px;
+    
 }
 
 .project-one-container p {
