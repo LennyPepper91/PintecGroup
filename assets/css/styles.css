@@ -1181,7 +1181,7 @@ h2 {
 
       .project-one-container {
         display: flex;
-        gap: 75px;
+        gap: 0px !important;
         flex-direction: column;
         
     }
