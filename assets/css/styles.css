@@ -1200,6 +1200,24 @@ h2 {
         order: 1 !important;
     }
 
+    h2 {
+        
+        padding-top: 65px;
+        
+        
+        
+    }
+
+    .project-one-container img {
+        width: 100%;
+        height: auto;
+        padding-top: 0px !important;
+        
+        
+      }
+
+      
+
     
     
 
