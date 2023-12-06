@@ -240,7 +240,7 @@ footer {
 
 
 #about-hero {
-    background-image: url("../images/3d-blue.png");
+    background-image: url("../images/3d-blue-two.png");
     
     
     background-size: cover;
@@ -783,16 +783,35 @@ h2 {
     }
 }
 
-@media screen and (max-width: 1000px) { 
-
+@media screen and (max-width: 1201px) {
     .service-test {
         
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+        max-width: 100%
+
         
         
-     }
+        
+     } 
+
+     .service-left {
+        order: 1 !important;
+    }
+
+     .service-test img {
+        max-width: 100% !important; /* Set maximum width to 100% */
+        height: auto !important;    /* Maintain aspect ratio */
+        
+    }
+    
+}
+
+
+@media screen and (max-width: 1000px) { 
+
+    
 
     #logo {
         width: 160px; 
@@ -1177,6 +1196,13 @@ h2 {
         
       }
 
+      .left-para {
+        order: 1 !important;
+    }
+
+    
+    
+
       
 
       .project-one-container {
@@ -1339,8 +1365,8 @@ h2 {
 
  .test-div {
     
-    height: 338px;
-    width: 600px;
+    height: auto;
+    max-width: 600px;
     background-color: #f0eceb;
     position: relative;
     overflow: hidden;
@@ -1410,6 +1436,7 @@ h2 {
     padding: 8px 18px;
     font-family: poppins;
     margin-left: 25px;
+    margin-bottom: 25px;
 }
 
 .service-button 
@@ -1744,7 +1771,13 @@ p {
 
 
 
+.left-para {
+    order: 0;
+}
 
+.service-left {
+    order: 0;
+}
 
 
 
