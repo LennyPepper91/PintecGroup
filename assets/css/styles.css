@@ -240,7 +240,7 @@ footer {
 
 
 #about-hero {
-    background-image: url("../images/3d-blue-two.png");
+    background-image: url("../images/3d-blue.png");
     
     
     background-size: cover;
@@ -1216,6 +1216,16 @@ h2 {
         
       }
 
+      .project-two-container img {
+        padding-top: 0px !important;
+        
+    
+    
+        
+    }
+
+      
+
       
 
     
@@ -1266,7 +1276,7 @@ h2 {
     }
 
     #about-hero {
-        background-image: url("../images/3d-blue.png");
+        background-image: url("../images/3d-blue-mob.png");
         
         
         background-size: cover;
@@ -1643,8 +1653,8 @@ h2 {
   }
   
   #carouselImage {
-    max-width: auto;  /* Set maximum width to ensure responsiveness */
-  height: 400px;
+    width: auto;  /* Set maximum width to ensure responsiveness */
+  height: auto;
   padding-top: 109px;
   display: block;
   transition: opacity 1s ease;
