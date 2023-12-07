@@ -1234,7 +1234,7 @@ h2 {
 
         .arrow {
             position: absolute;
-            top: 38% !important;
+            top: 30% !important;
             transform: translateY(50%);
             font-size: 40px;
             cursor: pointer;
