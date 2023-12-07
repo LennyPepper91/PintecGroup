@@ -1224,6 +1224,24 @@ h2 {
         
     }
 
+    #carouselImage {
+        width: 100%;  /* Set maximum width to ensure responsiveness */
+        height: auto;
+        padding-top: 0px !important;
+        display: block;
+        transition: opacity 0.5s ease;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 38% !important;
+            transform: translateY(50%);
+            font-size: 40px;
+            cursor: pointer;
+            color: white; /* Set arrow color */
+            opacity: 70%;
+          }
+
       
 
       
@@ -1650,14 +1668,16 @@ h2 {
   
   .carousel-container {
     position: relative;
+    
   }
   
   #carouselImage {
-    width: auto;  /* Set maximum width to ensure responsiveness */
+    /* Set maximum width to ensure responsiveness */
   height: auto;
   padding-top: 109px;
   display: block;
-  transition: opacity 1s ease;
+  transition: opacity 0.5s ease;
+  
   }
   
   .arrow {
