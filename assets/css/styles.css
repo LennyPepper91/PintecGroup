@@ -1242,6 +1242,16 @@ h2 {
             opacity: 70%;
           }
 
+          #projects-one-hero {
+            background: linear-gradient(to right, #2d5992, #26496b);
+            
+            background-size: cover;
+            
+           
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+
       
 
       
