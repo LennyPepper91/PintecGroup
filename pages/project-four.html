@@ -65,7 +65,7 @@
     <div>
       
       <div class="hero-content ">
-        <h1 class="fade">Our Projects</h1>
+        <h1 class="hidden">Our Projects</h1>
        
       </div>
     </div>
@@ -81,17 +81,17 @@
   
 
   <div class="left-para">
-    <h2 class="fade mobile-padding">One Welbeck</h2>
-    <span class="location mobile-padding" style="display: block;">Location: London, W1G 0AR</span>
-  <p class="mobile-padding">One Welbeck is one of the country’s largest specialist facilities for diagnostics, therapies, and minimally invasive surgery. Pintec Group has been working directly for WHP to provide efficient and proactive around-the-clock maintenance throughout their headquarters, ensuring to keep this highly efficient and quality private hospital up and running at all times with minimal disturbance to their patients.
+    <h2 class="fade mobile-padding hidden">One Welbeck</h2>
+    <span class="location mobile-padding hidden" style="display: block;">Location: London, W1G 0AR</span>
+  <p class="mobile-padding hidden">One Welbeck is one of the country’s largest specialist facilities for diagnostics, therapies, and minimally invasive surgery. Pintec Group has been working directly for WHP to provide efficient and proactive around-the-clock maintenance throughout their headquarters, ensuring to keep this highly efficient and quality private hospital up and running at all times with minimal disturbance to their patients.
 
     
     
     </p>
   
-  <span class="status mobile-padding">Status:</span>
-  <span class="ongoing ">Active</span>
-  <span class="maintenance ">Maintenance</span>
+  <span class="status mobile-padding hidden">Status:</span>
+  <span class="ongoing hidden">Active</span>
+  <span class="maintenance hidden">Maintenance</span>
 </div>
 <img src="../assets/images/project-four.jpg" alt="One Welbeck: Specialist facility for diagnostics, therapies, and minimally invasive surgery in London. Maintained by Pintec Group for efficient and proactive around-the-clock maintenance at their headquarters.">
 </div>
@@ -148,6 +148,25 @@
     
 </body>
 <script>
+
+const observer = new IntersectionObserver ((entries) => {
+    entries.forEach ((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting){
+        entry.target.classList.add('show');
+
+      } else {
+        entry.target.classList.remove ('show');
+      }
+  });
+  
+});
+  
+  
+  const hiddenElements = document.querySelectorAll ('.hidden');
+  hiddenElements.forEach((el) => observer.observe(el));
+
+
     const menu_btn = document.querySelector('.hamburger');
     const mobile_menu = document.querySelector('.mobile-nav');
   

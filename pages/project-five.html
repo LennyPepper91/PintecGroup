@@ -65,7 +65,7 @@
     <div>
       
       <div class="hero-content ">
-        <h1 class="fade">Our Projects</h1>
+        <h1 class="hidden">Our Projects</h1>
        
       </div>
     </div>
@@ -80,12 +80,12 @@
   <img src="../assets/images/project-five.jpg" alt="Sky Studios Elstree: State-of-the-art film and TV studio in Borehamwood. Pintec Group supplied Mechanical Labour for remedial and improvement works, focusing on upgrading welfare facilities. Our professional approach led to expanded service areas.">
 
   <div>
-    <h2 class="fade mobile-padding">Sky Studios Elstree</h2>
-  <span class="location mobile-padding" style="display: block;">Location: Borehamwood, WD6 1FX</span>
-  <p class="mobile-padding">Pintec Group has been supplying Mechanical Labour to a large M&E Company to carry out remedial and improvement works at the UK's newest, state-of-the-art film and TV studio for Sky in Boreham wood. 
+    <h2 class="hidden mobile-padding">Sky Studios Elstree</h2>
+  <span class="location mobile-padding hidden" style="display: block;">Location: Borehamwood, WD6 1FX</span>
+  <p class="mobile-padding hidden">Pintec Group has been supplying Mechanical Labour to a large M&E Company to carry out remedial and improvement works at the UK's newest, state-of-the-art film and TV studio for Sky in Boreham wood. 
     The scope of works for Pintec has been to upgrade the welfare facilities on this project and due to the professional manner in which these works have been carried out we have managed to secure more areas in which our services are required. </p>
-  <span class="status mobile-padding">Status:</span>
-  <span class="ongoing ">Active</span>
+  <span class="status mobile-padding hidden">Status:</span>
+  <span class="ongoing hidden">Active</span>
 </div>
 
 </div>
@@ -139,6 +139,24 @@
     
 </body>
 <script>
+  const observer = new IntersectionObserver ((entries) => {
+    entries.forEach ((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting){
+        entry.target.classList.add('show');
+
+      } else {
+        entry.target.classList.remove ('show');
+      }
+  });
+  
+});
+  
+  
+  const hiddenElements = document.querySelectorAll ('.hidden');
+  hiddenElements.forEach((el) => observer.observe(el));
+
+
     const menu_btn = document.querySelector('.hamburger');
     const mobile_menu = document.querySelector('.mobile-nav');
   
