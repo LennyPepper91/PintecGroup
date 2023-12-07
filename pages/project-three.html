@@ -181,6 +181,7 @@ var images = [
   "../assets/images/project-three-three.jpg",
   "../assets/images/project-three-four.jpg",
 ];
+var transitionDelay = 800; // Adjust the delay for changing images
 
 var intervalId; // To store the interval ID for later clearing
 
@@ -196,19 +197,18 @@ function changeImage(direction) {
   }
 
   var carouselImage = document.getElementById("carouselImage");
-  carouselImage.style.opacity = 0; // Set opacity to 0 before changing the image source
+  carouselImage.style.opacity = 0;
 
-  // After a short delay, change the image source and reset the opacity
   setTimeout(function () {
     carouselImage.src = images[currentImageIndex];
     carouselImage.style.opacity = 1;
-  }, 200); // Adjust the delay based on your preferences
+  }, transitionDelay);
 }
 
 function startAutoPlay() {
   intervalId = setInterval(function () {
     changeImage(1);
-  }, 5000); // Change image every 3000 milliseconds (3 seconds)
+  }, 6000); // Change image every 5000 milliseconds (5 seconds)
 }
 
 function stopAutoPlay() {
@@ -219,10 +219,10 @@ function stopAutoPlay() {
 startAutoPlay();
 
 // Listen for hover events
-var carouselImage = document.getElementById("carouselImage");
+var carouselContainer = document.querySelector(".carousel-container");
 
-carouselImage.addEventListener("mouseover", stopAutoPlay);
-carouselImage.addEventListener("mouseout", startAutoPlay);
+carouselContainer.addEventListener("mouseover", stopAutoPlay);
+carouselContainer.addEventListener("mouseout", startAutoPlay);
 
 document.addEventListener("keydown", function (event) {
   if (event.key === "ArrowLeft") {
