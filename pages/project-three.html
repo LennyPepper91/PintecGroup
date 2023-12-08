@@ -43,7 +43,7 @@
                   <li><a href="contact-us.html">Contact Us</a></li>
                 </ul>
               </nav>
-              <button class="hamburger">
+              <button class="hamburger" aria-label="Toggle Navigation Menu">
                 <div class="bar"></div>
               </button>
         </div>
@@ -181,9 +181,9 @@ var images = [
   "../assets/images/project-three-three.jpg",
   "../assets/images/project-three-four.jpg",
 ];
-var transitionDelay = 800; // Adjust the delay for changing images
+var transitionDelay = 800; 
 
-var intervalId; // To store the interval ID for later clearing
+var intervalId; 
 
 function changeImage(direction) {
   currentImageIndex += direction;
@@ -208,14 +208,14 @@ function changeImage(direction) {
 function startAutoPlay() {
   intervalId = setInterval(function () {
     changeImage(1);
-  }, 6000); // Change image every 5000 milliseconds (5 seconds)
+  }, 6000); 
 }
 
 function stopAutoPlay() {
   clearInterval(intervalId);
 }
 
-// Start auto play initially
+
 startAutoPlay();
 
 // Listen for hover events
