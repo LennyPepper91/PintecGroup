@@ -15,6 +15,10 @@ html, body {
   
 }
 
+
+
+
+
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -56,6 +60,9 @@ li a {
     color: #2d5992;
     position: relative;
 }
+
+
+
 
  ul li a:hover,
  ul li a:focus {
@@ -640,7 +647,7 @@ h2 {
     outline: none;
     border: none;
     margin-right: 25px;
-    ;
+    border-radius: 10px;
 
 
 
@@ -654,6 +661,7 @@ h2 {
     background-color: #1d0e0e;
     margin: 6px 0px;
     transition: 0.4s;
+    border-radius: 10px;
     
 
 
@@ -1225,7 +1233,7 @@ h2 {
     }
 
     #carouselImage {
-        width: 100%;  /* Set maximum width to ensure responsiveness */
+        width: 100%;  
         height: auto;
         padding-top: 0px !important;
         display: block;
@@ -1238,7 +1246,7 @@ h2 {
             transform: translateY(50%);
             font-size: 40px;
             cursor: pointer;
-            color: white; /* Set arrow color */
+            color: white; 
             opacity: 70%;
           }
 
