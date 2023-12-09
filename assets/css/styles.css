@@ -1425,7 +1425,7 @@ h2 {
  
 
  #test-img {
-    width: 600px;
+    
     z-index: 3;
     
    
@@ -1435,7 +1435,7 @@ h2 {
  .test-div {
     
     height: auto;
-    max-width: 600px;
+    
     background-color: #f0eceb;
     position: relative;
     overflow: hidden;
