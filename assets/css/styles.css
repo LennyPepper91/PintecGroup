@@ -168,6 +168,7 @@ h1 {
     font-weight: 200;
     font-size: 1.1rem;
     padding-top: 20px;
+    padding-bottom: 25px;
 }
 
 .about-container {
@@ -179,8 +180,8 @@ h1 {
 }
 
 
-.learn-more-button {
-        margin-top: 25px;
+.learn-more-button, .learn-more-button:focus {
+        
         padding: 10px;
         color: white;
         appearance: none;
@@ -199,7 +200,7 @@ h1 {
        
 }
 
-.learn-more-button:hover {
+.learn-more-button:hover, .learn-more-button:focus {
     background-color: #5882b9;
     color: rgba(255, 255, 255, 0.842);
     
@@ -1241,7 +1242,7 @@ h2 {
         height: auto;
         padding-top: 0px !important;
         display: block;
-        transition: opacity 0.5s ease;
+        transition: opacity 0.3s ease;
         }
 
         .arrow {
@@ -1473,7 +1474,7 @@ h2 {
     padding-top: 25px;
     margin-bottom: 0px;
     position: relative;
-    padding-left: 25px;
+    
     
     
 }
@@ -1484,8 +1485,7 @@ h2 {
     color: #424242;
     font-size: .9rem;
     position: relative;
-    padding-left: 25px;
-    padding-right: 25px;
+    
     margin-top: 5px;
     
 
@@ -1496,24 +1496,21 @@ h2 {
     background-color: #2d5992;
     margin-top: 2px;
     border: none;
-    font-weight: 100;
-    font-size: rem;
-    
-    
-    cursor: pointer;
-    padding: 8px 18px;
-    font-family: poppins;
-    margin-left: 25px;
-    margin-bottom: 25px;
-}
-
-.service-button 
-{
-    font-family: poppins;
     font-weight: 200;
     font-size: 1rem;
     color: white;
+    cursor: pointer;
+    padding: 8px 18px;
+    font-family: poppins;
+    
+    margin-bottom: 25px;
 }
+
+.service-padding {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
 
 
 #service-three-decal-two {
