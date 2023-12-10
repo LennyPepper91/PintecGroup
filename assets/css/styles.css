@@ -65,13 +65,13 @@ li a {
 
 
  ul li a:hover,
- ul li a:focus {
+ ul li a:focus, .active {
     color: #5882b9;
 }
 
 
 
-li a::after {
+li a::after  {
     content: '';
     height: 2px;
     width: 100%;
@@ -340,7 +340,7 @@ footer {
 }
 
 #projects-hero {
-    background-image: url("../images/3d-blue-five.png");
+    background-image: url("../images/3d-real-var2.jpg");
     
     background-size: cover;
     background-position: center;
@@ -985,7 +985,7 @@ h2 {
 
 
 #services-hero {
-    background-image: url("../images/3d-blue-two-real.png");
+    background-image: url("../images/3d-blue-two-peg.jpg");
     
     background-size: cover;
     background-position: center;
@@ -1115,47 +1115,66 @@ h2 {
   }
 
 
-.projects-container {
+  .projects-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 75px;
-    position: relative;
     
+    position: relative;
     bottom: -200px;
-
     overflow: hidden;
-    
-  transition: bottom 0.5s ease;
-}
+    transition: transform 0.5s ease, opacity 0.2s ease;
+  }
 
-.project-item img {
+  .button-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 25px;
+  }
+  
+  .project-item img {
     display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
   
-  transition: transform 1.5s, filter 1s;
-}
-
-.project-item:hover img {
-    transform: scale(1.1); 
-  filter: brightness(50%);
-}
+  .project-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(50%);
+  }
   
-
-.project-item {
+  .project-item {
     flex: 0 0 calc(50% - 10px);
-    height: 450px;
     overflow: hidden;
-    
-    
     position: relative;
+    transition: transform 0.5s ease, opacity 0.5s ease;
     
-}
+   /*  max-height: 450px; /* Set a maximum height */
+    opacity: 1;
+  }
+  
+  .item-expand {
+  /*  max-height: 450px; /* Set the maximum height for expanding */
+    opacity: 1;
+    
+    
+  }
+  
+  .item-shrink {
+    
+   transform: scale(0); 
+    opacity: 0;
+    position: absolute;
+    
+    
+  }
+
+
 
 .overlay-button {
     position: absolute;
@@ -1190,6 +1209,12 @@ h2 {
   }
 
 @media screen and (max-width: 1000px) {
+
+    .gray-divider {
+        padding-top: 15px;
+        background-color: #424242;
+        margin: 0;
+    }
 
     .overlay-button {
         position: absolute;
@@ -1444,6 +1469,8 @@ h2 {
     
 
 }
+
+
 
 
 .section-test {
@@ -1844,6 +1871,13 @@ p {
 
 .service-left {
     order: 0;
+}
+
+
+.stopper {
+    width: 100%;
+    flex: 0 0 calc(50% - 10px);
+    background-color: #2d5992;
 }
 
 
