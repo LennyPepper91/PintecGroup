@@ -183,6 +183,52 @@ const observer = new IntersectionObserver ((entries) => {
   }, 100);
 };
   
+
+const projects = [
+    { name: "Project One", link: "project-one.html" },
+    { name: "Project Two", link: "project-two.html" },
+    { name: "Project Three", link: "project-three.html" },
+    { name: "Project Four", link: "project-four.html" },
+    { name: "Project Four", link: "project-five.html" },
+    // Add more projects as needed
+];
+
+// Function to shuffle array randomly
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+// Shuffle the projects array randomly
+const shuffledProjects = shuffleArray(projects);
+
+// Get the related section element
+const relatedSection = document.querySelector(".related-section");
+
+// Clear existing content
+relatedSection.innerHTML = '';
+
+// Generate and append HTML for a random subset of 4 projects
+const numberOfProjectsToShow = 4;
+const projectsSubset = shuffledProjects.slice(0, numberOfProjectsToShow);
+
+projectsSubset.forEach((project) => {
+    const projectItem = document.createElement("a");
+    projectItem.href = project.link;
+
+    const projectThumbnail = document.createElement("div");
+    projectThumbnail.className = "related-item";
+
+    const projectImage = document.createElement("img");
+    projectImage.src = `../assets/images/${project.link.replace('.html', '.jpg')}`;
+
+    projectThumbnail.appendChild(projectImage);
+    projectItem.appendChild(projectThumbnail);
+    relatedSection.appendChild(projectItem);
+});
   </script>
 </html>
  
