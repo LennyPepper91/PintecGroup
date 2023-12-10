@@ -37,12 +37,12 @@
             <nav class="main-nav">
                 
                 <ul>
-                  <li><a href="../index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="services-two.html">Services</a></li>
-                  <li><a href="projects.html">Projects</a></li>
-                  <li><a href="careers.html">Careers</a></li>
-                  <li><a href="contact-us.html">Contact Us</a></li>
+                  <li><a class="nav__link" href="../index.html">Home</a></li>
+                  <li><a class="nav__link" href="about.html">About</a></li>
+                  <li><a class="nav__link" href="services-two.html">Services</a></li>
+                  <li><a class="nav__link" href="projects.html">Projects</a></li>
+                  <li><a class="nav__link" href="careers.html">Careers</a></li>
+                  <li><a class="nav__link" href="contact-us.html">Contact Us</a></li>
                 </ul>
               </nav>
               <button class="hamburger" aria-label="Toggle Navigation Menu">
@@ -66,7 +66,7 @@
     <div>
       
       <div class="hero-content ">
-        <h1 class="hidden">Projects</h1>
+        <h1 class="hidden">Our Projects</h1>
        
       </div>
     </div>
@@ -83,15 +83,19 @@
 
       
 
-      <h2 class="hidden">Our projects</h2>
+      <h2 class="hidden"></h2>
       
       <p class="big-about fade"></p>
-
-
-        
-
+     
         
     </div>
+
+    <div class="button-container">
+
+      <button type="button"  class="project-button" aria-label="See a list of our services">All</button>
+      <button type="button" data-btn="1" class="project-button" aria-label="See a list of our services">Active</button>
+      <button type="button" data-btn="2" class="project-button" aria-label="See a list of our services">Completed</button>
+      </div>
 
     
 
@@ -99,26 +103,27 @@
   </section>
 
   <div class="projects-container fade mobile-padding">
-    <div class="project-item">
+    <div class="project-item " data-img="1" data-category="active">
     <img src="../assets/images/project-one.jpg" alt="Crystal Palace Football Club Rehabilitation Centre project by Pintec Group | Plumbing, heating, drainage, and new plant room for a state-of-the-art facility with gym, medical center, pools, and classrooms." >
     <a href="project-one.html"><button class="overlay-button" aria-label="Learn more about this project">CPFC Academy Rehabilitation Centre</button></a>
     </div>
-    <div class="project-item">
+    <div class="project-item" data-img="2" data-category="completed">
         <img src="../assets/images/project-two.jpg" alt="DL-28 East, London project by Pintec Group | low-temperature hot water and chilled water services on Level 2 & 4 of this Cat B office fit-out for a large M&E Contractor." >
         <a href="project-two.html"><button class="overlay-button" aria-label="Learn more about this project">DL-28 East</button></a>
         </div>
-        <div class="project-item">
+        <div class="project-item" data-img="2" data-category="completed">
             <img src="../assets/images/project-three.jpg" alt="Whistable Care Home, Kent project by Pintec Group | plumbing, heating, and drainage works carried out on this project" >
             <a href="project-three.html"><button class="overlay-button" aria-label="Learn more about this project">Whitstable Care Home</button></a>
             </div>
-            <div class="project-item">
+            <div class="project-item" data-img="1" data-category="active">
                 <img src="../assets/images/project-four.jpg" alt="One Welbeck: Specialist facility for diagnostics, therapies, and minimally invasive surgery in London. Maintained by Pintec Group for efficient and proactive around-the-clock maintenance at their headquarters." >
                 <a href="project-four.html"><button class="overlay-button" aria-label="Learn more about this project">One Welbeck</button></a>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-img="1" data-category="active">
                   <img src="../assets/images/project-five.jpg" alt="Sky Studios Elstree: State-of-the-art film and TV studio in Borehamwood. Pintec Group supplied Mechanical Labour for remedial and improvement works, focusing on upgrading welfare facilities. Our professional approach led to expanded service areas." >
                   <a href="project-five.html"><button class="overlay-button" aria-label="Learn more about this project">Sky Studios Elstree</button></a>
                   </div>
+                  
     
 </div>
      
@@ -178,7 +183,70 @@ const observer = new IntersectionObserver ((entries) => {
     document.querySelector('.projects-container').style.bottom = '0';
   }, 100);
 };
+
+const navLinkEls = document.querySelectorAll('.nav__link');
+const windowPathname = window.location.pathname;
+
+navLinkEls.forEach(navLinkEl => {
+    if (navLinkEl.href.includes(windowPathname)) {
+        navLinkEl.classList.add('active');
+
+        // Create a new style rule for the ::after pseudo-element
+        const style = document.createElement('style');
+        style.textContent = `
+            .nav__link.active::after {
+                opacity: 1;
+            }
+        `;
+
+        // Append the new style rule to the document's head
+        document.head.appendChild(style);
+    }
+});
   
+
+const btns = document.querySelectorAll('.project-button');
+const imgs = document.querySelectorAll('.project-item img');
+
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener('click', filterImg);
+}
+
+function setActiveBtn(e) {
+  btns.forEach(btn => {
+    btn.classList.remove('btn-clicked');
+  });
+
+  e.target.classList.add('btn-clicked');
+}
+
+function filterImg(e) {
+  setActiveBtn(e);
+
+  imgs.forEach(img => {
+    const imgType = parseInt(img.parentNode.getAttribute('data-img'));
+    const btnType = parseInt(e.target.getAttribute('data-btn'));
+
+    if (btnType === 0 || imgType === btnType) {
+      img.parentNode.classList.remove('item-shrink');
+      img.parentNode.classList.add('item-expand');
+    } else {
+      img.parentNode.classList.remove('item-expand');
+      img.parentNode.classList.add('item-shrink');
+    }
+  });
+}
+
+btns[0].addEventListener('click', (e) => {
+  setActiveBtn(e);
+  imgs.forEach(img => {
+    img.parentNode.classList.remove('item-shrink');
+    img.parentNode.classList.add('item-expand');
+  });
+});
+
+
+
   </script>
 </html>
  

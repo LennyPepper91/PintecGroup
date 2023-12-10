@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers | Join our team</title>
+    <title>Careers | Join Our Team</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
             
@@ -38,13 +38,13 @@
             <nav class="main-nav">
                 
                 <ul>
-                  <li><a href="../index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="services-two.html">Services</a></li>
-                  <li><a href="projects.html">Projects</a></li>
+                  <li><a class="nav__link" href="../index.html">Home</a></li>
+                  <li><a class="nav__link" href="about.html">About</a></li>
+                  <li><a class="nav__link" href="services-two.html">Services</a></li>
+                  <li><a class="nav__link" href="projects.html">Projects</a></li>
                   
-                  <li><a href="careers.html">Careers</a></li>
-                  <li><a href="contact-us.html">Contact Us</a></li>
+                  <li><a class="nav__link" href="careers.html">Careers</a></li>
+                  <li><a class="nav__link" href="contact-us.html">Contact Us</a></li>
                   
 
                 </ul>
@@ -191,6 +191,26 @@
     menu_btn.classList.toggle('is-active');
     mobile_menu.classList.toggle('is-active');
   });
+
+  const navLinkEls = document.querySelectorAll('.nav__link');
+const windowPathname = window.location.pathname;
+
+navLinkEls.forEach(navLinkEl => {
+    if (navLinkEl.href.includes(windowPathname)) {
+        navLinkEl.classList.add('active');
+
+        // Create a new style rule for the ::after pseudo-element
+        const style = document.createElement('style');
+        style.textContent = `
+            .nav__link.active::after {
+                opacity: 1;
+            }
+        `;
+
+        // Append the new style rule to the document's head
+        document.head.appendChild(style);
+    }
+});
 
 </script>
 </html>
