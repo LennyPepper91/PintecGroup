@@ -1333,7 +1333,7 @@ h2 {
         height: 300px;
     }
     #services-hero {
-        background-image: url("../images/3d-blue-five-real-mob.jpg");
+        background-image: url("../images/services-final.jpg");
         
         background-size: cover;
         background-position: center;
@@ -1350,7 +1350,7 @@ h2 {
     }
 
     #about-hero {
-        background-image: url("../images/about-final.jpg");
+        background-image: url("../images/about-final-mob.jpg");
         
         
         background-size: cover;
