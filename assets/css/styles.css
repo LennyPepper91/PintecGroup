@@ -248,7 +248,7 @@ footer {
 
 
 #about-hero {
-    background-image: url("../images/3d-blue-real.jpg");
+    background-image: url("../images/about-final.jpg");
     
     
     background-size: cover;
@@ -450,7 +450,7 @@ h2 {
     
     cursor: pointer;
     padding: 10px 20px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-weight: 100;
 }
 
@@ -476,7 +476,7 @@ h2 {
     
     cursor: pointer;
     padding: 5px 15px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
 }
 
@@ -713,7 +713,7 @@ h2 {
 
    color: white;
    text-decoration: none;
-   font-family: poppins;
+   font-family: 'Poppins', sans-serif;
 
 }
 
@@ -985,7 +985,7 @@ h2 {
 
 
 #services-hero {
-    background-image: url("../images/3d-blue-two-peg.jpg");
+    background-image: url("../images/services-final.jpg");
     
     background-size: cover;
     background-position: center;
@@ -1033,7 +1033,7 @@ h2 {
   }
 
   .email-heading {
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     color: #424242;
     display: block;
     font-size: 1.4rem;
@@ -1043,7 +1043,7 @@ h2 {
   }
 
   .email {
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     color: #424242;
     display: block;
     font-size: 1.2rem;
@@ -1193,7 +1193,7 @@ h2 {
     border: none;
     border-radius: 2px;
     cursor: pointer;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     opacity: 85%;
     width: 360px;
@@ -1233,7 +1233,7 @@ h2 {
         border: none;
         border-radius: 2px;
         cursor: pointer;
-        font-family: poppins;
+        font-family: 'Poppins', sans-serif;
         font-size: .9rem;
         opacity: 85%;
         width: 300px;
@@ -1332,7 +1332,7 @@ h2 {
         height: 300px;
     }
     #services-hero {
-        background-image: url("../images/3d-blue-two.png");
+        background-image: url("../images/3d-blue-five-real-mob.jpg");
         
         background-size: cover;
         background-position: center;
@@ -1342,13 +1342,14 @@ h2 {
     }
 
     #projects-hero {
+        background-image: url("../images/3d-blue-five-real-mob.jpg");
         padding-top: 130px;
         padding-bottom: 130px;
 
     }
 
     #about-hero {
-        background-image: url("../images/3d-blue-mob.png");
+        background-image: url("../images/about-final.jpg");
         
         
         background-size: cover;
@@ -1534,7 +1535,7 @@ h2 {
     color: white;
     cursor: pointer;
     padding: 8px 18px;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     
     margin-bottom: 25px;
 }
