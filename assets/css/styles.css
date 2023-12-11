@@ -458,7 +458,7 @@ h2 {
     max-width: 1200px;
     margin: 0 auto;
     
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     display: flex;
     align-items: center;
     
@@ -1231,6 +1231,8 @@ h2 {
   }
 
 @media screen and (max-width: 1000px) {
+
+    
 
     .gray-divider {
         padding-top: 15px;
