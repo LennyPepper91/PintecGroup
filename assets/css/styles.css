@@ -1333,7 +1333,7 @@ h2 {
         height: 300px;
     }
     #services-hero {
-        background-image: url("../images/services-final.jpg");
+        background-image: url("../images/services-final-mob.jpg");
         
         background-size: cover;
         background-position: center;
