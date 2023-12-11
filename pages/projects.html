@@ -92,9 +92,9 @@
 
     <div class="button-container">
 
-      <button type="button"  class="project-button" aria-label="See a list of our services">All</button>
-      <button type="button" data-btn="1" class="project-button" aria-label="See a list of our services">Active</button>
-      <button type="button" data-btn="2" class="project-button" aria-label="See a list of our services">Completed</button>
+      <button type="button" data-btn="0"  class="project-button-two" aria-label="See a list of our services">All</button>
+      <button type="button" data-btn="1" class="project-button-two" aria-label="See a list of our services">Active</button>
+      <button type="button" data-btn="2" class="project-button-two" aria-label="See a list of our services">Completed</button>
       </div>
 
     
@@ -205,45 +205,57 @@ navLinkEls.forEach(navLinkEl => {
 });
   
 
-const btns = document.querySelectorAll('.project-button');
+const btns = document.querySelectorAll('.project-button-two');
 const imgs = document.querySelectorAll('.project-item img');
 
-for (let i = 0; i < btns.length; i++) {
-  btns[i].addEventListener('click', filterImg);
+function setActiveBtn(e) {
+    btns.forEach(btn => {
+        btn.classList.remove('btn-clicked');
+    });
+
+    e.target.classList.add('btn-clicked');
 }
 
-function setActiveBtn(e) {
-  btns.forEach(btn => {
-    btn.classList.remove('btn-clicked');
-  });
-
-  e.target.classList.add('btn-clicked');
+function showAllImages() {
+    imgs.forEach(img => {
+        img.parentNode.classList.remove('item-shrink');
+        img.parentNode.classList.add('item-expand');
+    });
 }
 
 function filterImg(e) {
-  setActiveBtn(e);
+    setActiveBtn(e);
 
-  imgs.forEach(img => {
-    const imgType = parseInt(img.parentNode.getAttribute('data-img'));
-    const btnType = parseInt(e.target.getAttribute('data-btn'));
-
-    if (btnType === 0 || imgType === btnType) {
-      img.parentNode.classList.remove('item-shrink');
-      img.parentNode.classList.add('item-expand');
+    if (e.target.getAttribute('data-btn') === '0') {
+        // Handle the "All" button separately
+        showAllImages();
     } else {
-      img.parentNode.classList.remove('item-expand');
-      img.parentNode.classList.add('item-shrink');
+        imgs.forEach(img => {
+            const imgType = parseInt(img.parentNode.getAttribute('data-img'));
+            const btnType = parseInt(e.target.getAttribute('data-btn'));
+
+            if (btnType === imgType) {
+                img.parentNode.classList.remove('item-shrink');
+                img.parentNode.classList.add('item-expand');
+            } else {
+                img.parentNode.classList.remove('item-expand');
+                img.parentNode.classList.add('item-shrink');
+            }
+        });
     }
-  });
 }
 
-btns[0].addEventListener('click', (e) => {
-  setActiveBtn(e);
-  imgs.forEach(img => {
-    img.parentNode.classList.remove('item-shrink');
-    img.parentNode.classList.add('item-expand');
-  });
+// Set the "All" button as active by default
+btns[0].classList.add('btn-clicked');
+
+// Show all images by default
+showAllImages();
+
+btns.forEach(btn => {
+    btn.addEventListener('click', filterImg);
 });
+
+
 
 
 
