@@ -440,29 +440,54 @@ h2 {
 
 }
 
-.project-button
-{
+.project-button {
     background-color: #2d5992;
     margin-top: 2px;
     border: none;
     font-weight: 200;
     font-size: 1rem;
     
-    
+    color: white;
     cursor: pointer;
     padding: 10px 20px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+    
 }
 
-
-
-.project-button 
-{
+.button-container {
+    max-width: 1200px;
+    margin: 0 auto;
     
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+
+
+.project-button-two {
+    background-color: #b0cdf344;
+    margin-top: 2px;
+    border: none;
     font-weight: 200;
-    font-size: 1rem;
+    font-size: .9rem;
+    
+    color: #424242;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    
+    
+}
+
+.project-button-two.btn-clicked {
+    
+    background-color: #2d5992;
     color: white;
+    
 }
 
 
@@ -1129,17 +1154,7 @@ h2 {
     transition: transform 0.5s ease, opacity 0.5s ease;
   }
 
-  .button-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    padding-bottom: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    flex-wrap: wrap;
-  }
+ 
   
   .project-item img {
     display: block;
