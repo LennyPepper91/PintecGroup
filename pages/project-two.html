@@ -102,24 +102,23 @@
     </div>
 
 
-<section class="related-section mobile-padding">
-    <a href="project-one.html"> <div class="related-item">
-        <img src="../assets/images/project-one.jpg">
-    </div></a>
-   
-    <a href="project-two.html"> <div class="related-item">
-        <img src="../assets/images/project-two.jpg">
-    </div></a>
-
-    <a href="project-three.html"> <div class="related-item">
-        <img src="../assets/images/project-three.jpg">
-    </div></a>
-
-    <a href="project-four.html"> <div class="related-item">
-        <img src="../assets/images/project-four.jpg">
-    </div></a>
-   
-</section>
+    <section class="related-section mobile-padding">
+      <div class="related-item">
+         <a href="/pages/project-one.html"><img src="/assets/images/project-one.jpg" class="related-img"></a>
+      </div>
+      
+      <div class="related-item">
+         <a href="/pages/project-two.html"><img src="/assets/images/project-two.jpg" class="related-img"></a>
+      </div>
+     
+      <div class="related-item">
+         <a href="/pages/project-three.html"><img src="/assets/images/project-three.jpg" class="related-img"></a>
+      </div>
+      
+      <div class="related-item">
+         <a href="/pages/project-four.html"><img src="/assets/images/project-four.jpg" class="related-img"></a>
+      </div>
+    </section>
 
 
      
@@ -182,15 +181,14 @@
 
 
 const projects = [
-    { name: "Project One", link: "project-one.html" },
-    { name: "Project Two", link: "project-two.html" },
-    { name: "Project Three", link: "project-three.html" },
-    { name: "Project Four", link: "project-four.html" },
-    { name: "Project Four", link: "project-five.html" },
+    { name: "Project One", link: "/pages/project-one.html" },
+    { name: "Project Two", link: "/pages/project-two.html" },
+    { name: "Project Three", link: "/pages/project-three.html" },
+    { name: "Project Four", link: "/pages/project-four.html" },
+    { name: "Project Five", link: "/pages/project-five.html" },
     // Add more projects as needed
 ];
 
-// Function to shuffle array randomly
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -199,31 +197,33 @@ function shuffleArray(array) {
     return array;
 }
 
-// Shuffle the projects array randomly
 const shuffledProjects = shuffleArray(projects);
 
-// Get the related section element
 const relatedSection = document.querySelector(".related-section");
 
-// Clear existing content
 relatedSection.innerHTML = '';
 
-// Generate and append HTML for a random subset of 4 projects
 const numberOfProjectsToShow = 4;
 const projectsSubset = shuffledProjects.slice(0, numberOfProjectsToShow);
 
 projectsSubset.forEach((project) => {
-    const projectItem = document.createElement("a");
-    projectItem.href = project.link;
+    const projectItem = document.createElement("div");
+    projectItem.className = "related-item";
 
-    const projectThumbnail = document.createElement("div");
-    projectThumbnail.className = "related-item";
+    const projectLink = document.createElement("a");
+    projectLink.href = project.link;
 
-    const projectImage = document.createElement("img");
-    projectImage.src = `../assets/images/${project.link.replace('.html', '.jpg')}`;
+    const projectThumbnail = document.createElement("img");
 
-    projectThumbnail.appendChild(projectImage);
-    projectItem.appendChild(projectThumbnail);
+    // Adjusted the image path construction to correctly replace '.html' with '.jpg'
+    const imagePath = `/assets/images${project.link.replace('/pages', '').replace('.html', '.jpg')}`;
+    console.log("Image Path:", imagePath);
+    
+    projectThumbnail.src = imagePath;
+    projectThumbnail.className = "related-img";
+
+    projectLink.appendChild(projectThumbnail);
+    projectItem.appendChild(projectLink);
     relatedSection.appendChild(projectItem);
 });
   </script>
