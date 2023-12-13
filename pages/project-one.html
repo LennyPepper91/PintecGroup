@@ -100,19 +100,19 @@
 </div>
 <section class="related-section mobile-padding">
   <div class="related-item">
-     <a href="/pages/project-one.html"><img src="/assets/images/project-one.jpg" class="related-img"></a>
+     <a href="project-one.html"><img src="../assets/images/project-one.jpg" class="related-img"></a>
   </div>
   
   <div class="related-item">
-     <a href="/pages/project-two.html"><img src="/assets/images/project-two.jpg" class="related-img"></a>
+     <a href="project-two.html"><img src="../assets/images/project-two.jpg" class="related-img"></a>
   </div>
  
   <div class="related-item">
-     <a href="/pages/project-three.html"><img src="/assets/images/project-three.jpg" class="related-img"></a>
+     <a href="project-three.html"><img src="../assets/images/project-three.jpg" class="related-img"></a>
   </div>
   
   <div class="related-item">
-     <a href="/pages/project-four.html"><img src="/assets/images/project-four.jpg" class="related-img"></a>
+     <a href="project-four.html"><img src="../assets/images/project-four.jpg" class="related-img"></a>
   </div>
 </section>
 </div>
@@ -211,7 +211,7 @@ projectsSubset.forEach((project) => {
     const projectThumbnail = document.createElement("img");
 
     // Adjusted the image path construction to correctly replace '.html' with '.jpg'
-    const imagePath = `/assets/images${project.link.replace('/pages', '').replace('.html', '.jpg')}`;
+    const imagePath = `../assets/images${project.link.replace('/pages', '').replace('.html', '.jpg')}`;
     console.log("Image Path:", imagePath);
     
     projectThumbnail.src = imagePath;
