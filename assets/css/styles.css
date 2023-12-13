@@ -1149,7 +1149,7 @@ h2 {
     margin: 0 auto;
     
     position: relative;
-    bottom: -200px;
+  /*  bottom: -200px; */
     overflow: hidden;
     transition: transform 0.5s ease, opacity 0.5s ease;
   }
@@ -1217,15 +1217,18 @@ h2 {
   }
 
   @media screen and (max-width: 700px) {
-    .related-section {
-    
-        display: flex;
-        gap: 10px;
-        max-width: 1200px;
-        margin: auto;
-        justify-content: center;
-        flex-direction: column;
-    }
+
+    .related-item {
+        width: calc(50% - 5px) !important;
+        height: auto !important;
+     }
+
+     .related-img {
+        width: 100% !important;
+        height: 100% !important;
+
+     }
+  
 
 
   }
@@ -1799,21 +1802,23 @@ h2 {
     max-width: 1200px;
     margin: auto;
     justify-content: start;
+    flex-wrap: wrap;
 }
 
 .related-item  {
-    overflow: hidden;
-    height: 106px;
-    width: auto;
+    width: 140px; /* Set width to 100% to fill the container */
+    height: auto;
+    
+    
     
     
 }
 
-.related-item img {
-    height: 106px;
-    width: auto;
-    background-color: #2d5992;
-    transition: transform 1.5s, filter 1s;
+.related-img {
+    width: 100%; /* Set width to 100% to fill the container */
+    max-height: 100% !important; /* Maintain aspect ratio */
+    
+    
     
     
 }
