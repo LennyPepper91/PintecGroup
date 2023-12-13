@@ -211,7 +211,7 @@ projectsSubset.forEach((project) => {
     const projectThumbnail = document.createElement("img");
 
     // Adjusted the image path construction to correctly replace '.html' with '.jpg'
-    const imagePath = `../assets/images${project.link.replace('/pages', '').replace('.html', '.jpg')}`;
+    const imagePath = `/assets/images${project.link.replace('/pages', '').replace('.html', '.jpg')}`;
     console.log("Image Path:", imagePath);
     
     projectThumbnail.src = imagePath;
