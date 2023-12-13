@@ -107,19 +107,19 @@
 
     <section class="related-section mobile-padding">
       <div class="related-item">
-         <a href="/pages/project-one.html"><img src="/assets/images/project-one.jpg" class="related-img"></a>
+         <a href="project-one.html"><img src="../assets/images/project-one.jpg" class="related-img"></a>
       </div>
       
       <div class="related-item">
-         <a href="/pages/project-two.html"><img src="/assets/images/project-two.jpg" class="related-img"></a>
+         <a href="project-two.html"><img src="../assets/images/project-two.jpg" class="related-img"></a>
       </div>
      
       <div class="related-item">
-         <a href="/pages/project-three.html"><img src="/assets/images/project-three.jpg" class="related-img"></a>
+         <a href="project-three.html"><img src="../assets/images/project-three.jpg" class="related-img"></a>
       </div>
       
       <div class="related-item">
-         <a href="/pages/project-four.html"><img src="/assets/images/project-four.jpg" class="related-img"></a>
+         <a href="project-four.html"><img src="../assets/images/project-four.jpg" class="related-img"></a>
       </div>
     </section>
 
@@ -184,11 +184,10 @@ const observer = new IntersectionObserver ((entries) => {
   
 
 const projects = [
-    { name: "Project One", link: "/pages/project-one.html" },
-    { name: "Project Two", link: "/pages/project-two.html" },
-    { name: "Project Three", link: "/pages/project-three.html" },
-    { name: "Project Four", link: "/pages/project-four.html" },
-    { name: "Project Five", link: "/pages/project-five.html" },
+    { name: "Project One", link: "project-one.html" },
+    { name: "Project Two", link: "project-two.html" },
+    { name: "Project Three", link: "project-three.html" },
+    { name: "Project Four", link: "project-four.html" },
     // Add more projects as needed
 ];
 
@@ -218,8 +217,8 @@ projectsSubset.forEach((project) => {
 
     const projectThumbnail = document.createElement("img");
 
-    // Adjusted the image path construction to correctly replace '.html' with '.jpg'
-    const imagePath = `/assets/images${project.link.replace('/pages', '').replace('.html', '.jpg')}`;
+    // Adjusted the image path construction to correctly match your HTML structure
+    const imagePath = `../assets/images/${project.link.replace('.html', '.jpg')}`;
     console.log("Image Path:", imagePath);
     
     projectThumbnail.src = imagePath;
