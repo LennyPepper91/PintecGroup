@@ -43,12 +43,12 @@
             <nav class="main-nav">
                 
                 <ul>
-                  <li><a href="index.html" title="Pintec Group Homepage" >Home</a></li>
-                  <li><a href="pages/about.html" title="About Pintec Group">About</a></li>
-                  <li><a href="pages/services-two.html" title="Our services">Services</a></li>
-                  <li><a href="pages/projects.html" title="Our projects">Projects</a></li>
-                  <li><a href="pages/careers.html" title="Explore new career opportunites at Pintec Group">Careers</a></li>
-                  <li><a href="pages/contact-us.html" title="Contact Us">Contact Us</a></li>
+                  <li><a class="nav__link" href="index.html" title="Pintec Group Homepage" >Home</a></li>
+                  <li><a class="nav__link" href="pages/about.html" title="About Pintec Group">About</a></li>
+                  <li><a class="nav__link" href="pages/services-two.html" title="Our services">Services</a></li>
+                  <li><a class="nav__link" href="pages/projects.html" title="Our projects">Projects</a></li>
+                  <li><a class="nav__link" href="pages/careers.html" title="Explore new career opportunites at Pintec Group">Careers</a></li>
+                  <li><a class="nav__link" href="pages/contact-us.html" title="Contact Us">Contact Us</a></li>
                 </ul>
               </nav>
 
@@ -130,8 +130,14 @@
   const navLinkEls = document.querySelectorAll('.nav__link');
 const windowPathname = window.location.pathname;
 
+
 navLinkEls.forEach(navLinkEl => {
-    if (navLinkEl.href.includes(windowPathname)) {
+    const navLinkPathname = new URL(navLinkEl.href).pathname;
+
+   
+
+
+    if ((windowPathname === navLinkPathname) || (windowPathname === '/index.html' && navLinkPathname === '/')) {
         navLinkEl.classList.add('active');
 
         // Create a new style rule for the ::after pseudo-element
@@ -145,9 +151,13 @@ navLinkEls.forEach(navLinkEl => {
         // Append the new style rule to the document's head
         document.head.appendChild(style);
     }
+
+    
 });
+
+
+
 
 </script>
 
 </html>
- 
