@@ -1814,6 +1814,7 @@ h2 {
     
     
     
+    
 }
 
 .related-img {
@@ -1823,6 +1824,12 @@ h2 {
     
     
     
+    
+    
+}
+
+.related-item img {
+    transition: transform 0.5s, filter 0.5s;
     
 }
 
