@@ -164,8 +164,11 @@ const observer = new IntersectionObserver ((entries) => {
   const navLinkEls = document.querySelectorAll('.nav__link');
 const windowPathname = window.location.pathname;
 
+
 navLinkEls.forEach(navLinkEl => {
-    if (navLinkEl.href.includes(windowPathname)) {
+    const navLinkPathname = new URL(navLinkEl.href).pathname;
+
+    if ((windowPathname === navLinkPathname) || (windowPathname === '/index.html' && navLinkPathname === '/')) {
         navLinkEl.classList.add('active');
 
         // Create a new style rule for the ::after pseudo-element
@@ -179,6 +182,8 @@ navLinkEls.forEach(navLinkEl => {
         // Append the new style rule to the document's head
         document.head.appendChild(style);
     }
+
+    
 });
 
 
