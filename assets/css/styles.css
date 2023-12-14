@@ -836,6 +836,13 @@ h2 {
         order: 1 !important;
     }
 
+    #test-img {
+        width: 100% !important; /* Set maximum width to 100% */
+        height: auto !important;    /* Maintain aspect ratio */
+        
+    }
+    
+
      .service-test img {
         max-width: 100% !important; /* Set maximum width to 100% */
         height: auto !important;    /* Maintain aspect ratio */
@@ -1491,6 +1498,7 @@ h2 {
  #test-img {
     
     z-index: 3;
+    width: 600px;
     
    
     
