@@ -2063,6 +2063,7 @@ p {
     height: 15px;
     background-color: #b0cdf362;
     margin: 0 12px;
+    cursor: pointer;
  }
 
  .carousel__indicator.current-slide {
