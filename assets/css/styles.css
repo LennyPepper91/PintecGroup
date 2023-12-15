@@ -1365,6 +1365,37 @@ h2 {
 
     }
 
+    .carousel {
+        position: relative;
+        max-height: 150px;
+        width: 100% !important;
+        margin: 0 auto;
+        margin-top: 0 !important;
+        background: green;
+     }
+    
+     .carousel__image {
+        
+        height: auto;
+        width: 100% !important;
+        object-fit: cover;
+     }
+    
+     .carousel__track-container {
+        background-color: aqua;
+        width: 100% !important;
+        height: 450px;
+        position: relative;
+        overflow: hidden;
+        background-color: yellow;
+     }
+
+     .carousel__nav {
+    
+        display: none !important;
+        
+     }
+
 
     .project-item {
         flex: 0 0 100%; 
@@ -1942,6 +1973,111 @@ p {
     flex: 0 0 calc(50% - 10px);
     background-color: #2d5992;
 }
+
+
+.carousel {
+    position: relative;
+    max-height: 450px;
+    width: 595px;
+    margin: 0 auto;
+    
+    background: green;
+    margin-top: 109px;
+ }
+
+ .carousel__image {
+    
+    height: 100%;
+    object-fit: cover;
+ }
+
+ .carousel__track-container {
+    background-color: aqua;
+    width: 595px;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    background-color: yellow;
+ }
+
+ .carousel__track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+    background-color: red;
+    
+ }
+
+ .carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: brown;
+ }
+
+ .carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    z-index: 2;
+
+ }
+
+ .carousel__button--left {
+    left: 15px;
+    
+
+
+ }
+
+ .carousel__button--right {
+    right: 15px;
+    
+    
+ }
+
+ .carousel__button img {
+    width: 15px;
+ }
+
+ .carousel__nav {
+    
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    
+    
+ }
+
+ .carousel__indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #b0cdf362;
+    margin: 0 12px;
+ }
+
+ .carousel__indicator.current-slide {
+    background-color: #2d5992;
+ }
+
+ .is-hidden {
+    display: none;
+ }
+
+ 
+
+
+
+
 
 
 
