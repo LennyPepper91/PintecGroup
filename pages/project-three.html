@@ -73,13 +73,37 @@
   <div class="gray-divider"></div>
 
   <section class="project-container-two">
+    
     <div class="project-three-container">
-      <div class="carousel-container">
-        <img src="../assets/images/project-three.jpg" alt="Whistable Care Home, Kent project by Pintec Group | plumbing, heating, and drainage works carried out on this project" id="carouselImage">
-        <div class="arrow arrow-left" onclick="changeImage(-1)">❮</div>
-        <div class="arrow arrow-right" onclick="changeImage(1)">❯</div>
-      </div>
+      
+        <div class="carousel">
+            <button class="carousel__button left carousel__button--left is-hidden">
+               <img src="../assets/images/arrow-left.svg" alt="">
+            </button>
+            <div class="carousel__track-container">
+               <ul class="carousel__track">
+                  <li class="carousel__slide current-slide">
+                     <img class="carousel__image" src="../assets/images/project-three.jpg" alt="">
+                  </li>
+                  <li class="carousel__slide">
+                     <img class="carousel__image" src="../assets/images/project-three-two.jpg" alt="">
+                  </li>
+                  <li class="carousel__slide">
+                     <img class="carousel__image" src="../assets/images/project-three-three.jpg" alt="">
+                  </li>
+               </ul>
+            </div>
+            <button class="carousel__button carousel__button--right">
+               <img src="../assets/images/arrow-right.svg" alt="">
+            </button>
+            <div class="carousel__nav">
+               <button class="carousel__indicator current-slide"></button>
+               <button class="carousel__indicator"></button>
+               <button class="carousel__indicator"></button>
+            </div>
+         </div>
   
+      
       <div>
         <h2 class="fade mobile-padding hidden">Whitstable Care Home</h2>
         <span class="location mobile-padding hidden" style="display: block;">Location: Whitstable, CT5 3SE</span>
@@ -133,7 +157,7 @@
   </footer>
   <div class="copyright">© Pintec Group Ltd 2023</div>  
 
-    
+  <script src="../assets/js/carousel.js"></script> 
 </body>
 <script>
   const observer = new IntersectionObserver ((entries) => {
@@ -163,120 +187,7 @@
     });
 
 
-    window.onload = function() {
-  // Use setTimeout to delay the transition for a smooth effect
-  setTimeout(function() {
-    document.querySelector('.projects-container').style.bottom = '0';
-  }, 100);
-};
 
-
-
-
-var currentImageIndex = 0;
-var images = [
-  "../assets/images/project-three.jpg",
-  "../assets/images/project-three-two.jpg",
-  "../assets/images/project-three-three.jpg",
-  "../assets/images/project-three-four.jpg",
-];
-var transitionDelay = 800; 
-
-var intervalId; 
-
-function changeImage(direction) {
-  currentImageIndex += direction;
-
-  if (currentImageIndex >= images.length) {
-    currentImageIndex = 0;
-  }
-
-  if (currentImageIndex < 0) {
-    currentImageIndex = images.length - 1;
-  }
-
-  var carouselImage = document.getElementById("carouselImage");
-  carouselImage.style.opacity = 0;
-
-  setTimeout(function () {
-    carouselImage.src = images[currentImageIndex];
-    carouselImage.style.opacity = 1;
-  }, transitionDelay);
-}
-
-function startAutoPlay() {
-  intervalId = setInterval(function () {
-    changeImage(1);
-  }, 6000); 
-}
-
-function stopAutoPlay() {
-  clearInterval(intervalId);
-}
-
-
-startAutoPlay();
-
-// Listen for hover events
-var carouselContainer = document.querySelector(".carousel-container");
-
-carouselContainer.addEventListener("mouseover", stopAutoPlay);
-carouselContainer.addEventListener("mouseout", startAutoPlay);
-
-document.addEventListener("keydown", function (event) {
-  if (event.key === "ArrowLeft") {
-    changeImage(-1);
-  } else if (event.key === "ArrowRight") {
-    changeImage(1);
-  }
-});
-
-
-const projects = [
-    { name: "Project One", link: "project-one.html" },
-    { name: "Project Two", link: "project-two.html" },
-    { name: "Project Three", link: "project-three.html" },
-    { name: "Project Four", link: "project-four.html" },
-    // Add more projects as needed
-];
-
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
-const shuffledProjects = shuffleArray(projects);
-
-const relatedSection = document.querySelector(".related-section");
-
-relatedSection.innerHTML = '';
-
-const numberOfProjectsToShow = 4;
-const projectsSubset = shuffledProjects.slice(0, numberOfProjectsToShow);
-
-projectsSubset.forEach((project) => {
-    const projectItem = document.createElement("div");
-    projectItem.className = "related-item";
-
-    const projectLink = document.createElement("a");
-    projectLink.href = project.link;
-
-    const projectThumbnail = document.createElement("img");
-
-    // Adjusted the image path construction to correctly match your HTML structure
-    const imagePath = `../assets/images/${project.link.replace('.html', '.jpg')}`;
-    console.log("Image Path:", imagePath);
-    
-    projectThumbnail.src = imagePath;
-    projectThumbnail.className = "related-img";
-
-    projectLink.appendChild(projectThumbnail);
-    projectItem.appendChild(projectLink);
-    relatedSection.appendChild(projectItem);
-});
   
 
 
@@ -284,3 +195,4 @@ projectsSubset.forEach((project) => {
   </script>
 </html>
  
+
